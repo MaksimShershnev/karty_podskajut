@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #f3efec;
+  --text-color: #312a4e;
+  --accent-color: #ffab6b;
+  --main-font: Raleway;
+  --accent-font: 'STIX Two Text';
+}
+
+p,
+h1,
+h2,
+h3,
+blockquote,
+ul,
+ol,
+li,
+figure {
+  margin: 0;
+}
+
+.page {
+  margin: 0;
+  color: var(--text-color, #312a4e);
+  font-family: var(--main-font, Arial, Helvetica, sans-serif);
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+  background-color: var(--bg-color, #f3efec);
+  min-inline-size: 360px;
+}
+
+.header {
+  padding-block-start: 10vi;
+}
+
+.header__title {
+  padding-block-end: 40px;
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+}
+
+.content-section {
+  padding-inline-start: 5vi;
+  padding-inline-end: 5vi;
+}
+
+.heading {
+  font-family: var(--accent-font, Georgia, 'Times New Roman', Times, serif);
+  font-family: 'STIX Two Text';
+  font-weight: 600;
+  line-height: 0.9; /* 27px */
+  text-align: center;
+}
+
+.content__title {
+  padding-block-start: 7vi;
+  padding-block-end: 2.5vi;
+  font-size: 30px;
+}
+
+.content__text-block {
+  font-size: 18px;
+}
+
+.content__text-block_type_first-lettered
+  .content__paragraph:first-of-type::first-letter {
+  display: inline-block;
+  margin-inline-end: 5px;
+  padding: 0 4px;
+  background-color: var(--accent-color);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.content__text-block .content__paragraph:not(:last-of-type) {
+  padding-block-end: 1.5em;
+}
+
+.content__paragraph-link {
+  color: inherit;
+  text-underline-offset: 2px;
+}
+
+.content__blockquote {
+  inline-size: 75%;
+  margin: auto;
+  padding-block-end: 1.5em;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 2; /* 36px */
+}
+
+.content__list {
+  padding-inline-start: 40px;
+  list-style-type: none;
+}
+
+.content__list-item {
+  position: relative;
+}
+
+.content__list-item::before {
+  content: '';
+  position: absolute;
+  inline-size: 15px;
+  block-size: 15px;
+  margin-inline-start: -25px;
+  margin-block-start: 3px;
+  background-image: url('../images/marker-light.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.content__list-item:not(:last-of-type) {
+  padding-block-end: 10px;
+}
