@@ -14,6 +14,28 @@
   <body class="page theme_dark">
     <header class="header">
       <h1 class="heading header__title content-section">Карты подскажут</h1>
+      <nav class="header__menu content-section">
+        <div class="header__logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="135" height="25">
+            <use href="./images/logo.svg#logo"></use>
+          </svg>
+        </div>
+        <ul class="header__theme-toggler">
+          <li>
+            <button class="header__theme-button header__theme-button_type_dark">
+              Тёмная
+            </button>
+          </li>
+          <li>
+            <button
+              class="header__theme-button header__theme-button_type_light header__theme-button_is-active"
+              disabled
+            >
+              Светлая
+            </button>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main class="content content-section">
       <h2 class="heading content__title">
@@ -43,7 +65,27 @@
           жанра эмбиент Брайан Ино и мультимедиа-художник Питер Шмидт.
         </p>
       </div>
-
+      <figure class="content__figure">
+        <picture>
+          <source
+            srcset="./images/cards-1x.avif 1x, ./images/cards-2x.avif 2x"
+            type="image/avif"
+          />
+          <source
+            srcset="./images/cards-1x.webp 1x, ./images/cards-2x.webp 2x"
+            type="image/webp"
+          />
+          <img
+            class="content__picture"
+            srcset="./images/cards-1x.png 1x, ./images/cards-2x.png 2x"
+            alt="Букет ярких роз крупным планом"
+            loading="lazy"
+          />
+        </picture>
+        <figcaption class="content__picture-caption">
+          Колода Oblique Strategies
+        </figcaption>
+      </figure>
       <div class="content__text-block">
         <p class="content__paragraph">
           Oblique Strategies в основном используют музыканты, но колода подходит
@@ -65,11 +107,13 @@
           Вот что сам Брайан Ино рассказывает о создании Oblique Strategies:
         </p>
         <blockquote class="content__blockquote">
-          Эти карты появились, потому что я оказывался в рабочих ситуациях
-          (особенно в звукозаписывающих студиях), когда из-за паники быстро
-          забывал, что кроме самых очевидных решений были и другие — косвенные.
-          И часто именно такие неочевидные способы выдавали гораздо более
-          интересные результаты, чем решения „в лоб“.
+          <q
+            >Эти карты появились, потому что я оказывался в рабочих ситуациях
+            (особенно в звукозаписывающих студиях), когда из-за паники быстро
+            забывал, что кроме самых очевидных решений были и другие —
+            косвенные. И часто именно такие неочевидные способы выдавали гораздо
+            более интересные результаты, чем решения „в лоб“</q
+          >.
         </blockquote>
         <p class="content__paragraph">
           Таким образом, колода Ино поощряет нас видеть препятствия не как
@@ -101,6 +145,12 @@
           >.
         </p>
       </div>
+      <article class="content__card">
+        <h3 class="heading content__card-title">
+          Use an <span class="colored-text">old idea</span>
+        </h3>
+        <p class="content__card-subtitle">Воспользуйтесь старой идеей</p>
+      </article>
       <h2 class="heading content__title">Кто пользовался Oblique Strategies</h2>
       <div class="content__text-block">
         <ul class="content__list">
@@ -115,9 +165,11 @@
         </ul>
       </div>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <p class="footer__copyright">VЁRSTKA</p>
+    </footer>
 
     <!-- Раскомментируйте строчку ниже, когда вёрстка будет готова. Если вы назвали все классы. как нужно, переключатель темы будет работать -->
-    <!-- <script src="./scripts/theme-changer.js"></script> -->
+    <script src="./scripts/theme-changer.js"></script>
   </body>
 </html>
